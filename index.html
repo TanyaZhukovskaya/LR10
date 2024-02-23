@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Массивы</title>
+  </head>
+  <body>
+    <script>
+        // Создание трех массивов
+        var array1 = [1, 2, 3];
+        var array2 = ["a", "b", "c", "d"];
+        var array3 = [true, false, true, false, true];
+
+        // Создание четвертого массива из элементов первых трех массивов
+        var array4 = array1.concat(array2, array3);
+        array4.splice(1, 1);
+        array4.unshift(1);
+        array4.push(5);
+        // Удаление элемента из начала массива
+        array4.shift();
+        // Удаление элемента из конца массива
+        array4.pop();
+        //   delete array4[1]; // Удаление элемента с индексом 0
+        //   delete array4[4]; // Удаление элемента с индексом 3
+        //   delete array4[6]; // Удаление элемента с индексом 5
+        // Способ 1: присвоение пустого массива
+      //   array4 = [];
+      //   // Способ 2: использование метода splice()
+      //   array4.splice(0, array4.length);
+        for (var i = 0; i < array4.length; i++) {
+          document.write(i + " - " + array4[i] + "<br>");
+        }
+        document.write(
+          "Количество элементов: " +
+            array4.length +
+            "<br>" +
+            "Все элементы с указанием индекса элемента массива:" +
+            "<br>"
+        );
+
+        array4.forEach(function (element, index) {
+          if (element !== undefined) {
+            document.write(index + " - " + element + "<br>");
+          }
+        });
+      //Задание по варианту
+      //1 метод
+      //   var array5 = ["элемент1", "элемент2", "элемент3"];
+      //   var result1 = array5.join(",");
+      //   document.write(result1); // выведет "элемент1, элемент2, элемент3"
+      //2 метод
+      //   let array = ["элемент1", "элемент2", "элемент3"];
+      //   let result = "";
+      //   for (let i = 0; i < array.length; i++) {
+      //     result += array[i];
+      //     if (i !== array.length - 1) {
+      //       result += ",";
+      //     }
+      //   }
+      //   document.write(result); // выведет "элемент1, элемент2, элемент3"
+      //2. Расчет среднего значения элементов массива и проверка наличия числа равного среднему значению
+    //   var array = [1, 2, 7, 4, 5];
+    //   var sum = 0;
+    //   for (let i = 0; i < array.length; i++) {
+    //     sum += array[i];
+    //   }
+    //   var average = sum / array.length;
+    //   document.write(average +"<br>"); // выведет 3
+
+    //   var includesAverage = array.includes(average);
+    //   document.write(includesAverage); 
+     
+    </script>
+  </body>
+</html>
